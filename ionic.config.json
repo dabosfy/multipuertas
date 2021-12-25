@@ -1,0 +1,7 @@
+{
+  "name": "multipuertas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
