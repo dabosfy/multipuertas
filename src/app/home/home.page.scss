@@ -130,6 +130,20 @@ ion-content {
 @media only screen and (max-width: 600px) {
     ion-header {
         background: rgba(black, 0.5);
+
+        .wrapper {
+            .title {
+                font-size: 18px;
+            }
+
+            .menu {
+
+                .item {
+                    padding: 10px 6px;
+                    margin: 0;
+                }
+            }
+        }
     }
 
     ion-content {
