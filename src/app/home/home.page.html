@@ -1,20 +1,117 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border" #header>
+    <div class="wrapper">
+        <h1 class="title">Nombre de la marca</h1>
+        <ul class="menu">
+            <li class="item" (click)="scrollTo(merik)">Option 1</li>
+            <li class="item" (click)="scrollTo(erreka)">Option 2</li>
+            <li class="item" (click)="scrollTo(liftmaster)">Option 3</li>
+        </ul>
+    </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [scrollEvents]="true" (ionScroll)="listenerScroll($event)">
+    <div class="background-welcome">
+        <div class="wrapper">
+            <div class="text-welcome">Este es el texto de bienvenida</div>
+        </div>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div class="container-gates" #merik>
+        <div class="wrapper">
+            <h2>Merik</h2>
+            <div class="gates-list">
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Porton
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Porton
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Porton
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-gates" #erreka>
+        <div class="wrapper">
+            <h2>Erreka</h2>
+            <div class="gates-list">
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Porton
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Porton
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-gates" #liftmaster>
+        <div class="wrapper">
+            <h2>LiftMaster</h2>
+            <div class="gates-list">
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Porton
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrapper">
+            <ul>
+                <li>
+                    <a href="https://web.facebook.com/Automatizaci%C3%B3n-de-portones-MULTI-Puertas-250270819197013"
+                       target="_blank">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <span>55-11-22-3334</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:9611695501">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        <span>961-169-5501</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/9611695501?text=Hola...">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <span>55-11-22-3334</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </ion-content>
+
