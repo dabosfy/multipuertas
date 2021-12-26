@@ -159,10 +159,12 @@ ion-content {
     }
 
     ion-content {
-        .background-welcome {
+
+        .container-welcome {
 
             .text-welcome {
                 max-width: 100%;
+                margin: 0 10px 20% 10px;
             }
         }
 
