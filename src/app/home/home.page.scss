@@ -25,7 +25,9 @@ ion-header {
             display: flex;
             align-items: center;
             color: white;
-            font-size: 20px;
+            font-size: 23px;
+            text-transform: uppercase;
+            font-weight: bold;
         }
 
         .menu {
@@ -54,13 +56,13 @@ ion-header {
 }
 
 ion-content {
-    .background-welcome {
+    .container-welcome {
+        position: relative;
         background-image: url("/assets/images/garage.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         height: 100vh;
-        position: relative;
 
         .text-welcome {
             position: absolute;
@@ -69,7 +71,16 @@ ion-content {
             margin-left: 30px;
             font-size: 50px;
             color: white;
-            max-width: 50%;
+            max-width: 40%;
+        }
+
+        .savana {
+            background: rgb(black, 0.3);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
         }
     }
 
@@ -78,6 +89,7 @@ ion-content {
 
         .gates-list {
             display: flex;
+            flex-wrap: wrap;
 
             .item {
                 width: 300px;

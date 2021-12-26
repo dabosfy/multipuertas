@@ -1,18 +1,20 @@
 <ion-header class="ion-no-border" #header>
     <div class="wrapper">
-        <h1 class="title">Nombre de la marca</h1>
+        <h1 class="title">Multipuertas</h1>
         <ul class="menu">
-            <li class="item" (click)="scrollTo(merik)">Option 1</li>
-            <li class="item" (click)="scrollTo(erreka)">Option 2</li>
-            <li class="item" (click)="scrollTo(liftmaster)">Option 3</li>
+            <li class="item" (click)="scrollTo(merik)">Merik</li>
+            <li class="item" (click)="scrollTo(erreka)">Erreka</li>
+            <li class="item" (click)="scrollTo(liftmaster)">LiftMaster</li>
         </ul>
     </div>
 </ion-header>
 
 <ion-content [scrollEvents]="true" (ionScroll)="listenerScroll($event)">
-    <div class="background-welcome">
+    <div class="container-welcome">
+        <div class="background-welcome"></div>
+        <div class="savana"></div>
         <div class="wrapper">
-            <div class="text-welcome">Este es el texto de bienvenida</div>
+            <div class="text-welcome">Venta e instalaciones de motores para garage</div>
         </div>
     </div>
 
@@ -25,7 +27,7 @@
                         <img src="/assets/images/gate-merik-1.png" alt="">
                     </div>
                     <div class="content">
-                        Porton
+                        Merik mod. 511
                     </div>
                 </div>
                 <div class="item">
@@ -33,7 +35,7 @@
                         <img src="/assets/images/gate-merik-1.png" alt="">
                     </div>
                     <div class="content">
-                        Porton
+                        Merik mod. 411W
                     </div>
                 </div>
                 <div class="item">
@@ -41,7 +43,15 @@
                         <img src="/assets/images/gate-merik-1.png" alt="">
                     </div>
                     <div class="content">
-                        Porton
+                        Merik mod. 711
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Motor de pistones G Bat 300
                     </div>
                 </div>
             </div>
@@ -81,7 +91,23 @@
                         <img src="/assets/images/gate-merik-1.png" alt="">
                     </div>
                     <div class="content">
-                        Porton
+                        Lift-Master mod. 1210E
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Lift-Master mod. 7511W a 24V
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/assets/images/gate-merik-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        Motor de pistones lift-master mod. LA-350 a 24V
                     </div>
                 </div>
             </div>
