@@ -1,5 +1,5 @@
 <ion-header class="ion-no-border" #header>
-    <div class="wrapper">
+    <div class="container">
         <h1 class="title">Multipuertas</h1>
         <ul class="menu">
             <li class="item" (click)="scrollTo(merik)">Merik</li>
@@ -11,104 +11,63 @@
 
 <ion-content [scrollEvents]="true" (ionScroll)="listenerScroll($event)">
     <div class="container-welcome">
-        <div class="background-welcome"></div>
-        <div class="savana"></div>
-        <div class="wrapper">
-            <div class="text-welcome">Venta e instalaciones de motores para garage</div>
+        <div class="column-left">
+            <div>
+                <div class="title">Multipuertas</div>
+                <div class="label">Venta e instalaciones de motores para garage</div>
+            </div>
+        </div>
+        <div class="column-right">
+            <img class="image" src="/assets/images/gate-merik-1.png" alt="" width="400">
         </div>
     </div>
 
-    <div class="container-gates" #merik>
+    <div class="container-gates" #merik *ngIf="gateMerikList.length">
         <div class="wrapper">
             <h2>Merik</h2>
-            <div class="gates-list">
-                <div class="item">
+        </div>
+
+        <div class="gates-list">
+            <div class="item" *ngFor="let gate of gateMerikList">
+                <div class="content">
                     <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
+                        <img [src]="gate.image" alt="">
                     </div>
-                    <div class="content">
-                        Merik mod. 511
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
-                    </div>
-                    <div class="content">
-                        Merik mod. 411W
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
-                    </div>
-                    <div class="content">
-                        Merik mod. 711
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
-                    </div>
-                    <div class="content">
-                        Motor de pistones G Bat 300
-                    </div>
+                    <div class="name">{{gate.name}}</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-gates" #erreka>
+    <div class="container-gates" #erreka *ngIf="gateErrekaList.length">
         <div class="wrapper">
             <h2>Erreka</h2>
-            <div class="gates-list">
-                <div class="item">
+        </div>
+
+        <div class="gates-list">
+            <div class="item" *ngFor="let gate of gateErrekaList">
+                <div class="content">
                     <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
+                        <img [src]="gate.image" alt="">
                     </div>
-                    <div class="content">
-                        Porton
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
-                    </div>
-                    <div class="content">
-                        Porton
-                    </div>
+                    <div class="name">{{gate.name}}</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-gates" #liftmaster>
+    <div class="container-gates" #liftmaster *ngIf="gateLiftMasterList.length">
         <div class="wrapper">
             <h2>LiftMaster</h2>
-            <div class="gates-list">
-                <div class="item">
+        </div>
+
+        <div class="gates-list">
+            <div class="item" *ngFor="let gate of gateLiftMasterList">
+                <div class="content">
                     <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
+                        <img [src]="gate.image" alt="">
                     </div>
-                    <div class="content">
-                        Lift-Master mod. 1210E
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
-                    </div>
-                    <div class="content">
-                        Lift-Master mod. 7511W a 24V
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/assets/images/gate-merik-1.png" alt="">
-                    </div>
-                    <div class="content">
-                        Motor de pistones lift-master mod. LA-350 a 24V
-                    </div>
+                    <div class="name">{{gate.name}}</div>
                 </div>
             </div>
         </div>

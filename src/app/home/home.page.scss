@@ -5,18 +5,8 @@
 
 ion-header {
     position: fixed;
-    background: rgba(black, 0);
-    transition: all 0.3s;
 
-    &:hover {
-        background: rgba(black, 0.5);
-    }
-
-    &.contrast {
-        background: rgba(black, 0.5);
-    }
-
-    .wrapper {
+    .container {
         display: flex;
 
         .title {
@@ -24,10 +14,11 @@ ion-header {
             flex: 1;
             display: flex;
             align-items: center;
-            color: white;
+            color: black;
             font-size: 23px;
             text-transform: uppercase;
             font-weight: bold;
+            letter-spacing: 4px;
         }
 
         .menu {
@@ -36,60 +27,65 @@ ion-header {
             display: flex;
             align-items: center;
 
-
             .item {
                 list-style: none;
                 padding: 10px;
                 cursor: pointer;
                 margin: 2px;
-                color: white;
-
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
+                color: black;
             }
-
         }
     }
-
 }
 
 ion-content {
+
     .container-welcome {
-        position: relative;
-        background-image: url("/assets/images/garage.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
+        background: #E1DCE3;
+        min-height: 80vh;
+        display: flex;
 
-        .text-welcome {
-            position: absolute;
-            bottom: 0;
-            margin-bottom: 20%;
-            margin-left: 30px;
-            font-size: 50px;
-            color: white;
-            max-width: 40%;
+        .column-left {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .title {
+                color: black;
+                font-size: 70px;
+                font-weight: bold;
+                max-width: 500px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .label {
+                color: black;
+                font-size: 30px;
+                max-width: 500px;
+                text-align: center;
+            }
         }
 
-        .savana {
-            background: rgb(black, 0.3);
-            position: absolute;
-            bottom: 0;
-            top: 0;
-            right: 0;
-            left: 0;
+        .column-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .image {
+                margin: 15px;
+            }
         }
+
     }
 
-    .container-gates {
-        margin: 50px 0;
-        padding-top: 40px;
 
+    .container-gates {
         h2 {
-            margin: 0 15px;
+            margin: 40px 20px;
+            font-size: 30px;
         }
 
         .gates-list {
@@ -97,24 +93,78 @@ ion-content {
             flex-wrap: wrap;
 
             .item {
-                width: 300px;
-                margin: 10px;
-                min-height: 300px;
-                box-shadow: 0 0 10px #AAA;
-                border-radius: 10px;
-                overflow: hidden;
-                background: white;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-bottom: 100px;
 
                 .content {
-                    padding: 10px;
-                    text-align: center;
-                    margin-bottom: 10px;
+                    position: relative;
+                    margin-right: 100px;
+                    border-radius: 10px;
+
+                    .image {
+                        max-width: 300px;
+                        padding: 100px 20px;
+                    }
+
+                    .name {
+                        position: absolute;
+                        top: 10%;
+                        right: -100px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        max-width: 200px;
+                        text-align: center;
+                    }
+                }
+
+
+                &:nth-child(even) {
+                    justify-content: flex-start;
+
+                    .content {
+                        margin-left: 100px;
+
+                        .name {
+                            top: 80%;
+                            right: auto;
+                            left: -100px;
+                        }
+                    }
+                }
+
+                &:nth-child(1n) {
+                    .content {
+                        background: #EFD5D8;
+                    }
+                }
+
+                &:nth-child(2n) {
+                    .content {
+                        background: #CBE0E1;
+                    }
+                }
+
+                &:nth-child(3n) {
+                    .content {
+                        background: #D4CFD8;
+                    }
+                }
+
+                &:nth-child(4n) {
+                    .content {
+                        background: #E3E3E3;
+                    }
                 }
             }
         }
     }
 
     .footer {
+        background: #ECECEC;
+        padding: 100px 0;
 
         ul {
             padding: 0;
@@ -146,7 +196,6 @@ ion-content {
 
 @media only screen and (max-width: 600px) {
     ion-header {
-        background: rgba(black, 0.5);
 
         .wrapper {
             .title {
@@ -154,7 +203,6 @@ ion-content {
             }
 
             .menu {
-
                 .item {
                     padding: 10px 6px;
                     margin: 0;
@@ -166,10 +214,11 @@ ion-content {
     ion-content {
 
         .container-welcome {
-
-            .text-welcome {
-                max-width: 100%;
-                margin: 0 10px 20% 10px;
+            .column-right {
+                display: none;
+            }
+            .column-left {
+                justify-content: center;
             }
         }
 
@@ -178,11 +227,23 @@ ion-content {
 
             .gates-list {
                 flex-direction: column;
-                padding: 10px;
 
                 .item {
                     width: 100%;
-                    margin: 0 0 10px 0;
+                    justify-content: center !important;
+
+                    .content {
+                        margin-right: 0 !important;
+                        margin-left: 0 !important;
+
+                        .name {
+                            right: 0 !important;
+                            left: 0 !important;
+                            text-align: center;
+                            max-width: none;
+                            top: 10% !important;
+                        }
+                    }
                 }
             }
         }
