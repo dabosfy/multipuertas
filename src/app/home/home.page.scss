@@ -83,6 +83,8 @@ ion-content {
 
 
     .container-gates {
+        padding-top: 40px;
+
         h2 {
             margin: 40px 20px;
             font-size: 30px;
@@ -196,16 +198,19 @@ ion-content {
 
 @media only screen and (max-width: 600px) {
     ion-header {
+        .container {
+            flex-direction: column;
 
-        .wrapper {
             .title {
-                font-size: 18px;
+                margin: 5px auto;
             }
 
             .menu {
                 .item {
                     padding: 10px 6px;
                     margin: 0;
+                    flex: 1;
+                    text-align: center;
                 }
             }
         }
@@ -217,8 +222,19 @@ ion-content {
             .column-right {
                 display: none;
             }
+
             .column-left {
                 justify-content: center;
+
+                .title {
+                    font-size: 50px;
+                    padding: 0 20px;
+                }
+
+                .label {
+                    font-size: 25px;
+                    padding: 0 20px;
+                }
             }
         }
 
@@ -242,6 +258,7 @@ ion-content {
                             text-align: center;
                             max-width: none;
                             top: 10% !important;
+                            padding: 0 10px;
                         }
                     }
                 }

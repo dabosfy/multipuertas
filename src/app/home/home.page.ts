@@ -43,11 +43,15 @@ export class HomePage implements OnInit {
 
         this.gateErrekaList = [
             {
-                name: 'Porton',
+                name: 'Accionador electromecanico Cat-800',
                 image: '/assets/images/gate-merik-1.png'
             },
             {
-                name: 'Porton',
+                name: 'Accionador electromecanico Kairos a 24V',
+                image: '/assets/images/gate-merik-1.png'
+            },
+            {
+                name: 'Accionador electromecanico coaxial Ergos para cortina',
                 image: '/assets/images/gate-merik-1.png'
             }
         ];
