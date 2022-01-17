@@ -1,5 +1,5 @@
 import {Component, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {Gate} from "../interfaces/gate";
+import {Gate} from '../interfaces/gate';
 
 @Component({
     selector: 'app-home',
