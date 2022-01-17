@@ -25,49 +25,49 @@ export class HomePage implements OnInit {
         this.gateMerikList = [
             {
                 name: 'Merik mod. 511',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/motor-511.png'
             },
             {
                 name: 'Merik mod. 411W',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/motor-411w.png'
             },
             {
                 name: 'Merik mod. 711',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/motor-711.png'
             },
             {
                 name: 'Motor de pistones G Bat 300',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/gate-merik-1.png'
             }
         ];
 
         this.gateErrekaList = [
             {
                 name: 'Accionador electromecanico Cat-800',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/motor-corredizo-erreka-cat800.png'
             },
             {
                 name: 'Accionador electromecanico Kairos a 24V',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/pistones-erreka-kairos.png'
             },
             {
                 name: 'Accionador electromecanico coaxial Ergos para cortina',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/motor-enrollable-erreka-ergos-200.png'
             }
         ];
 
         this.gateLiftMasterList = [
             {
                 name: 'Lift-Master mod. 1210E',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/gate-merik-1.png'
             },
             {
                 name: 'Lift-Master mod. 7511W a 24V',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/gate-merik-1.png'
             },
             {
                 name: 'Motor de pistones lift-master mod. LA-350 a 24V',
-                image: '/assets/images/gate-merik-1.png'
+                image: '/assets/images/motors/gate-merik-1.png'
             }
         ];
     }
