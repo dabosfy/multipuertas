@@ -37,7 +37,7 @@ export class HomePage implements OnInit {
             },
             {
                 name: 'Motor de pistones G Bat 300',
-                image: '/assets/images/motors/gate-merik-1.png'
+                image: '/assets/images/motors/bat_300.png'
             }
         ];
 
@@ -59,7 +59,7 @@ export class HomePage implements OnInit {
         this.gateLiftMasterList = [
             {
                 name: 'Lift-Master mod. 1210E',
-                image: '/assets/images/motors/gate-merik-1.png'
+                image: '/assets/images/motors/1210e.png'
             },
             {
                 name: 'Lift-Master mod. 7511W a 24V',
@@ -67,7 +67,7 @@ export class HomePage implements OnInit {
             },
             {
                 name: 'Motor de pistones lift-master mod. LA-350 a 24V',
-                image: '/assets/images/motors/gate-merik-1.png'
+                image: '/assets/images/motors/Piston-Merik-LA350.png'
             }
         ];
     }
